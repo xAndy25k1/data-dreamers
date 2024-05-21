@@ -48,12 +48,12 @@ const { href, title, body } = Astro.props;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	p {
-		margin-top: 0.9rem;
+		margin-right: 0.9;
 		margin-bottom: 0;
 	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
-		background-image: var(--accent-gradient);
+		background-image: var(--margin-grad);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
