@@ -17,11 +17,30 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav> </nav>
+		<nav>
+			<ul>
+				<li><a href="#about">Über mich</a></li>
+				<li><a href="#projects">Projekte</a></li>
+				<li><a href="#contact">Kontakt</a></li>
+			</ul>
+		</nav>
 		<main>
-				<slot />	
+			<section id="about">
+				<h1>Über mich</h1>
+				<p>Ein kurzer Text über mich.</p>
+			</section>
+			<section id="projects">
+				<h2>Projekte</h2>
+				<slot></slot> <!-- Hier kannst du Projekte dynamisch laden -->
+			</section>
+			<section id="contact">
+				<h2>Kontakt</h2>
+				<p>Email: beispiel@example.com</p>
+			</section>
 		</main>
-		<footer> </footer>
+		<footer>
+			<p>&copy; 2024 Mein Portfolio</p>
+		</footer>
 	</body>
 </html>
 <style is:global>
@@ -38,7 +57,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #262629;
+		background: #414150;
 		background-size: 224px;
 		color: #fefefe;
 	}
