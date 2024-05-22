@@ -1,4 +1,6 @@
 ---
+import Glass from '../components/Glassmorphism.astro';
+
 interface Props {
 	title: string;
 }
@@ -7,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -17,31 +19,31 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav>
-			<ul>
-				<li><a href="#about">Über mich</a></li>
-				<li><a href="#projects">Projekte</a></li>
-				<li><a href="#contact">Kontakt</a></li>
-			</ul>
-		</nav>
-		<main>
-			<section id="about">
-				<h1>Über mich</h1>
-				<p>Ein kurzer Text über mich.</p>
-			</section>
-			<section id="projects">
-				<h2>Projekte</h2>
-				<slot></slot> <!-- Hier kannst du Projekte dynamisch laden -->
-			</section>
-			<section id="contact">
-				<h2>Kontakt</h2>
-				<p>Email: beispiel@example.com</p>
-			</section>
-		</main>
-		<footer>
-			<p>&copy; 2024 Mein Portfolio</p>
-		</footer>
+		
+		<section>
+			HalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHalloHallo
+
+
+
+		</section>
+
+		<section>
+
+
+
+		</section>
+
+		<section>
+			<slot></slot>
+		</section>
+
+			
+			
+		
+		
+		
 	</body>
+	<footer>  <footer>
 </html>
 <style is:global>
 	:root {
@@ -57,7 +59,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #414150;
+		background: #434353;
 		background-size: 224px;
 		color: #fefefe;
 	}

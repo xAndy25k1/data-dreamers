@@ -1,0 +1,70 @@
+<!--img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Apex_Legends_logo.svg" class="gros"--->
+<img src="https://picsum.photos/id/1032/200/200" style="--c: #945f31;">
+
+<!doctype>
+<html>
+<head>
+</head>
+
+<body>
+    
+  </body>
+
+</html>
+
+
+<style>
+
+  .gros{
+    top: 55%;
+    left: 50%;
+    scale: 1000%;
+    position: absolute;
+   
+  }
+
+  .bottom{
+    
+    position: relative;
+    top:50vh;
+    left: 70%;  
+    bottom: 50vh;
+    justify-content: left;
+    align-items: center;
+
+  }
+
+img {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #030303; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  img:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+  
+  body {
+    margin: 0;
+    height: 10;
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    gap: 30px;
+    background: pink;
+  }
+
+  </style>
