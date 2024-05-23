@@ -7,10 +7,10 @@
 
 <body>
 	<div class="container">
-		<div class="btn"><a href="page2" >Read more 1</a></div>
-		<div class="btn"><a href="#" >Read more 2</a></div>
-		<div class="btn"><a href="#" >Read more 3</a></div>
-        <div class="btn"><a href="#" >Read more 4</a></div>
+		<div class="btn"><a href="Übermich">Über mich</a></div>
+		<div class="btn"><a href="Timeline">Timeline</a></div>
+		<div class="btn"><a target="_blank" href="https://www.lutzundgrub.de/">Lutz & Grub</a></div> 
+        <div class="btn"><a href="../">Startseite</a></div>
 
 	</div>		
 </body>
@@ -26,30 +26,38 @@
 	font-family: "Roboto", sans-serif;
 }
 
+
+
 .container {
-	width: 1309px;
-	display: flex;
+	z-index: -5;
+	width: 1302px;
+	height: 0px;
+	display: flex ;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
 }
-.container .btn {
+.container .btn { /* Alle blöcke `?` */
 	position: relative;
-	top: 0 ;
+	top:  10;
 	left: 0;
+	
 	width: 250px;
 	height: 50px;
 	margin: 0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
 .container .btn a { /* schriftblöcke */
 	position: relative;
 	top: 720%;
-	left: 120%;
-	width: 600px;
+	left: -50vh;
+	width: 200px;
 	height: 50px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	background: rgba(0, 0, 0, 0.05);
@@ -61,7 +69,7 @@
 	letter-spacing: 1px;
 	text-decoration: none;
 	overflow: hidden;
-	color: #fff;
+	color: #D1E8E2;
 	font-weight: 400px;
 	z-index: 1;
 	transition: 0.5s;
@@ -73,8 +81,8 @@
 .container .btn a::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 900%;
+	top: ;
+	left: -50vh;
 	width: 50%;
 	height: 100%;
 	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
@@ -88,7 +96,7 @@
 .container .btn::before { /*morph effect */
 	content: "";
 	position: absolute;
-	left: 170%;
+	left: -37vh;
     top: 820%;
 	transform: translatex(-50%);
 	bottom: -5px;
@@ -100,19 +108,19 @@
 	transition-delay: 0.5;
 }
 .container .btn:hover::before /*lightup button*/ {
-	bottom: 0;   
+	bottom: 10%;   
 	height: 50%;
-	width: 80%;
+	width: 10vh;
 	border-radius: 30px;
 }
 
 .container .btn::after { /* Lichtblöcke oben */
 	content: "";
 	position: absolute;
-	left: 170%;
 	transform: translatex(-50%);
-	top: 350px;
-	width: 100px;
+	top: 698%;
+	left: -37vh;
+	width: 10vh;
 	height: 10px;
 	background: #f00;
 	border-radius: 10px;
@@ -120,35 +128,37 @@
 	transition-delay: 0.5;
 }
 .container .btn:hover::after /*lightup button*/ {
-	top: 340px;
-	height: 50%;
-	width: 80%;
+	top: 700%;
+	left: -37vh;
+	height: 30%;
+	width: 10vh;
 	border-radius: 30px;
 }
 .container .btn:nth-child(1)::before, /*chnage 1*/
 .container .btn:nth-child(1)::after {
-	background: #ff1f71;
-	box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
-		0 0 60px #ff1f71;
+	background: #FFCB9A;
+	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+		0 0 60px #FFCB9A;
 }
 .container .btn:nth-child(2)::before, /* 2*/
 .container .btn:nth-child(2)::after {
-	background: #2db2ff;
-	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
-		0 0 60px #2db2ff;
+	background: #FFCB9A;
+	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+		0 0 60px #FFCB9A;
 }
 .container .btn:nth-child(3)::before, /* 3*/
 .container .btn:nth-child(3)::after {
-	background: #1eff45;
-	box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
-		0 0 60px #1eff45;
+	background: #FFCB9A;
+	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+		0 0 60px #FFCB9A;
 }
 .container .btn:nth-child(4)::before, /* 3*/
 .container .btn:nth-child(4)::after {
-	background: #c2b60d;
-	box-shadow: 0 0 5px #c2b60d, 0 0 15px #c2b60d, 0 0 30px #c2b60d,
-		0 0 60px #c2b60d;
+	background: #FFCB9A;
+	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+		0 0 60px #FFCB9A;
 }
+
 
 
 </style>
