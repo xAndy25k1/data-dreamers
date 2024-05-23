@@ -1,94 +1,172 @@
 ---
-import Glass from '../components/Glassmorphism.astro';
 
 interface Props {
-	title: string;
+
+title: string;
+
 }
 
+
 const { title } = Astro.props;
+
 ---
-
 <!doctype html>
+
 <html lang="de">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		 <div class="mainbackground"></div>
-		 <div class="secondbackground"></div>
-		 <div class="buttonsopo"> <slot> </slot></div>		
-		
-	</body>
-	<footer>  <footer>
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="description" content="Astro description" />
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+
+</head>
+
+<body>
+
+  <div class="mainbackground"></div>
+
+  <div class="secondbackground">
+
+	<div class="buttonsopo">
+
+	  <slot></slot>
+
+	</div>
+
+  </div>
+
+</body>
+
 </html>
+
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			rgb(141, 60, 60) 60%
-		);
-	}
-	.mainbackground{
 
-			position: absolute;
-			border-radius: 50;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #2C3531; /* Haupt-Hintergrundfarbe */
-		}
+:root {
 
-	.secondbackground {
-			position: absolute;
-			border-radius: 12px;
-			top: 2.5%; /* Abstand vom oberen Rand */
-			left: 2.5%; /* Abstand vom linken Rand */
-			width: 95%; /* Breite des zweiten Hintergrunds */
-			height: 95%; /* Höhe des zweiten Hintergrunds */
-			background-color: #116466; /* Zweite Hintergrundfarbe */
-			backdrop-filter: blur(4px);
-			box-shadow: 0 4px 30px #D9B08C;
-			border: 1px solid rgba(215, 39, 39, 0.51)
-			text-decoration: none;
-			
+  --accent: 136, 58, 234;
 
-			z-index: 1; /* Damit der zweite Hintergrund hinter dem Haupt-Hintergrund liegt */
+  --accent-light: 224, 204, 250;
 
-  }
-  	.buttonsopo {
-		position: absolute;
-		left: 25vh;
-		
-		z-index: 2;
-	}
+  --accent-dark: 49, 10, 101;
 
-	
-	html {
-		font-family: system-ui, sans-serif;
-		background: #303036;
-		background-size: 100%;
-		color: #ffffff;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  --accent-gradient: linear-gradient(
+
+	45deg,
+
+	rgb(var(--accent)),
+
+	rgb(var(--accent-light)) 30%,
+
+	rgb(141, 60, 60) 60%
+
+  );
+
+}
+
+
+.mainbackground {
+
+  position: absolute;
+
+  border-radius: 50;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background-color: #2C3531; /* Haupt-Hintergrundfarbe */
+
+}
+
+
+.secondbackground {
+
+  position: absolute;
+
+  border-radius: 12px;
+
+  top: 2.5%; /* Abstand vom oberen Rand */
+
+  left: 2.5%; /* Abstand vom linken Rand */
+
+  width: 95%; /* Breite des zweiten Hintergrunds */
+
+  height: 95%; /* Höhe des zweiten Hintergrunds */
+
+  background-color: #116466; /* Zweite Hintergrundfarbe */
+
+  backdrop-filter: blur(4px);
+
+  box-shadow: 0 4px 30px #D9B08C;
+
+  border: 1px solid rgba(255, 255, 255, 0.51);
+
+  text-decoration: none;
+
+  z-index: 1; /* Damit der zweite Hintergrund hinter dem Haupt-Hintergrund liegt */
+
+}
+
+
+
+
+.container {
+
+	position: relative;
+	left: 10%;
+	transform: tr
+	z-index: 2;
+}
+
+
+
+html {
+
+  font-family: Lucida Console;
+
+  background: #303036;
+
+  background-size: 100%;
+
+  color: #ffffff;
+
+}
+
+
+code {
+
+  font-family:
+
+	Menlo,
+
+	Monaco,
+
+	Lucida Console,
+
+	Liberation Mono,
+
+	DejaVu Sans Mono,
+
+	Bitstream Vera Sans Mono,
+
+	Courier New,
+
+	monospace;
+
+}
+
 </style>

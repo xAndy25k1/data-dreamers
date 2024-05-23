@@ -1,6 +1,6 @@
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Glassmorphism button</title>
 </head>
@@ -19,146 +19,191 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Roboto", sans-serif;
-}
+
 
 
 
 .container {
-	z-index: -5;
-	width: 1302px;
-	height: 0px;
-	display: flex ;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-.container .btn { /* Alle blöcke `?` */
-	position: relative;
-	top:  10;
-	left: 0;
-	
-	width: 250px;
-	height: 50px;
-	margin: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-.container .btn a { /* schriftblöcke */
-	position: relative;
-	top: 720%;
-	left: -50vh;
-	width: 200px;
-	height: 50px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0, 0, 0, 0.05);
-	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 20px;
-	padding: 10px;
-	letter-spacing: 1px;
-	text-decoration: none;
-	overflow: hidden;
-	color: #D1E8E2;
-	font-weight: 400px;
-	z-index: 1;
-	transition: 0.5s;
-	backdrop-filter: blur(105px);
-}
-.container .btn:hover a {
-	letter-spacing: 3px;
-}
-.container .btn a::before {
-	content: "";
-	position: absolute;
-	top: ;
-	left: -50vh;
-	width: 50%;
-	height: 100%;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-	transform: skewX(45deg) translate(0);
-	transition: 0.5s;
-	filter: blur(0px);
-}
-.container .btn:hover a::before {
-	transform: skewX(45deg) translate(200px);
-}
-.container .btn::before { /*morph effect */
-	content: "";
-	position: absolute;
-	left: -37vh;
-    top: 820%;
-	transform: translatex(-50%);
-	bottom: -5px;
-	width: 100px;
-	height: 10px;
-	background: #f00;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
-}
-.container .btn:hover::before /*lightup button*/ {
-	bottom: 10%;   
-	height: 50%;
-	width: 10vh;
-	border-radius: 30px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: auto;
+  left: 0; /* Zentrieren der Buttons */
+  scrollbar-width: 200;
+     &::-webkit-scrollbar {
+        width: 0;
+      }
 
-.container .btn::after { /* Lichtblöcke oben */
-	content: "";
-	position: absolute;
-	transform: translatex(-50%);
-	top: 698%;
-	left: -37vh;
-	width: 10vh;
-	height: 10px;
-	background: #f00;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
-}
-.container .btn:hover::after /*lightup button*/ {
-	top: 700%;
-	left: -37vh;
-	height: 30%;
-	width: 10vh;
-	border-radius: 30px;
-}
-.container .btn:nth-child(1)::before, /*chnage 1*/
-.container .btn:nth-child(1)::after {
-	background: #FFCB9A;
-	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
-		0 0 60px #FFCB9A;
-}
-.container .btn:nth-child(2)::before, /* 2*/
-.container .btn:nth-child(2)::after {
-	background: #FFCB9A;
-	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
-		0 0 60px #FFCB9A;
-}
-.container .btn:nth-child(3)::before, /* 3*/
-.container .btn:nth-child(3)::after {
-	background: #FFCB9A;
-	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
-		0 0 60px #FFCB9A;
-}
-.container .btn:nth-child(4)::before, /* 3*/
-.container .btn:nth-child(4)::after {
-	background: #FFCB9A;
-	box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
-		0 0 60px #FFCB9A;
+z-index: 5;
 }
 
 
+.btn {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #D1E8E2;
+  font-weight: 400;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(105px);
 
-</style>
+}
+
+
+.btn:hover {
+  letter-spacing: 3px;
+}
+
+.btn a {
+
+  position: relative;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #D1E8E2;
+  font-weight: 400;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(105px);
+
+}
+
+
+.btn a::before {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.btn:hover a::before {
+
+  transform: skewX(45deg) translate(200px);
+
+}
+
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+
+}
+
+
+.btn:hover::before {
+  bottom: 10%;
+  height: 50%;
+  width: 10vh;
+  border-radius: 30px;
+}
+
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10vh;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+
+}
+
+
+.btn:hover::after {
+  top: 0;
+  left: 0;
+  height: 30%;
+  width: 10vh;
+  border-radius: 30px;
+
+}
+
+
+.btn:nth-child(1)::before,
+
+.btn:nth-child(1)::after {
+  background: #FFCB9A;
+  box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+    0 0 60px #FFCB9A;
+}
+
+
+.btn:nth-child(2)::before,
+
+.btn:nth-child(2)::after {
+
+  background: #FFCB9A;
+  box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+    0 0 60px #FFCB9A;
+
+}
+
+
+.btn:nth-child(3)::before,
+.btn:nth-child(3)::after {
+
+  background: #FFCB9A;
+  box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+    0 0 60px #FFCB9A;
+
+}
+
+
+.btn:nth-child(4)::before,
+
+.btn:nth-child(4)::after {
+
+  background: #FFCB9A;
+  box-shadow: 0 0 5px #FFCB9A, 0 0 15px #FFCB9A, 0 0 30px #FFCB9A,
+    0 0 60px #FFCB9A;
+
+}
