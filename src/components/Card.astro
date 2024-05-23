@@ -1,61 +1,212 @@
----
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+<!DOCTYPE html>
 
-const { href, title, body } = Astro.props;
----
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #219931;
-		background-image: ;
-		background-size: 10%;
-		border-radius: 8px;
-		background-position: 10%;
-		transition: ancient-gra 4s;
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a { 
-		width: 100%; 
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.95rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-right: 0.9;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--margin-grad);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<html>
+
+
+<head>
+
+
+	<title>Glas-Effekt Boxen</title>
+
+
+	<style>
+
+
+		* {
+
+			box-sizing: border-box;
+
+			margin: 0;
+
+			padding: 0;
+
+		}
+
+
+		body {
+
+			background-color: #f0f0f0;
+
+			display: flex;
+
+			flex-wrap: wrap;
+
+			justify-content: center;
+
+			align-items: center;
+
+			height: 100vh;
+
+		}
+
+
+		.glass-box {
+
+			position: relative;
+
+			width: 400px;
+
+			height: 500px;
+
+			display: inline-block;
+
+			flex-wrap: wrap;
+
+			justify-content: center;
+
+			align-items: center;
+
+			background: rgba(0, 0, 0, 0.05);
+
+			box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+			border-radius: 20px;
+
+			padding: 80px;
+
+			letter-spacing: 1px;
+
+			text-decoration: none;
+
+			overflow: hidden;
+
+			color: #D1E8E2;
+
+			font-weight: 400;
+
+			z-index: 1;
+
+			transition: 0.5s;
+
+			backdrop-filter: blur(105px);
+
+			margin: 20px;
+
+			display: flex;
+
+			justify-content: center;
+
+			align-items: center;
+
+			text-align: center;
+
+		}
+
+
+ 		.glass-container {
+
+			display: flex;
+
+			flex-wrap: wrap;
+
+			justify-content: center;
+
+		}
+
+
+		.icon-box {
+
+			position: relative;
+			width: 80px;
+
+			height: 80px;
+
+			background-color: #cec8c8;
+
+			border-radius: 30%;
+
+			margin: 20px ;
+
+			display: inline-block;
+
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+		}
+
+
+		.icon-box:hover {
+
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+		}
+
+
+		.glass-box:hover {
+
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+		}
+
+		.h2{
+			position: relative;
+			margin:auto;
+			top: 5vh;
+		}
+
+	</style>
+
+
+</head>
+
+
+<body>
+
+	<div class="glass-container">
+
+		<div class="glass-box">
+			<div class="img"><img src="https://media.licdn.com/dms/image/D4E03AQGyxwy3SUm75w/profile-displayphoto-shrink_800_800/0/1713004556458?e=1721865600&v=beta&t=Gu0IO5CKpTSx2aoS8xn1p_jTHYI_XjmNqW0641ZUHJY"
+			style="height: 300px;width:300px;border-radius: 20%;object-fit: cover; margin: -1vh auto "
+			>
+			<div class="h2"><h2>Andreas Steinhardt</h2></div>
+		</div>
+		
+		</div>
+
+
+		<div class="glass-box">Text</div>
+
+
+		<div class="glass-box">Text</div>
+
+
+		<div class="glass-box">
+
+			<h1>Hier sind meine wichtigen Links um mich wieder zu finden</h3>
+
+			<div style="display: flex; justify-content: bottom; align-items: bottom; margin-top: 20px;;">
+
+				<a href="https://www.linkedin.com/" target="_blank">
+
+					<div class="icon-box">
+
+						<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"  width="40" height="40" alt="LinkedIn">
+
+					</div>
+
+				</a>
+
+				<a href="https://github.com/" target="_blank">
+
+					<div class="icon-box">
+
+						<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40" height="40" alt="GitHub">
+
+					</div>
+
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+
+</html>

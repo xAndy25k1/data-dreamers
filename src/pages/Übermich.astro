@@ -10,27 +10,13 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Welcome to Astro.">
 	
-    <section> 
-        
-       
-    </nav>
-       
-   </section>
 
-   <section> 
-       
-       <glass></glass>
-   
-   </section>
+    <Card> </Card>
 
-   <section> 
-      
+    
 
-   </section>
-
-
-   <section> 
-        <div class="buttons"><div> <Glassmorphism>
+   <section>
+        <div class="buttons"> <Glassmorphism>
         </div>
    </section>
 
@@ -41,7 +27,14 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
 
+.buttons
+{
+    position: relative;
+    margin: auto;
+    top: 6vh;
+    z-index: 5;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
-
-</style>
-
+}
